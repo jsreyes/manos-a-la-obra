@@ -3,7 +3,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
          MatFormFieldModule, MatInputModule, MatCardModule, MatMenuModule, MatSnackBarModule,
          MatDialogModule, MatExpansionModule, MatChipsModule, MatAutocompleteModule,
          MatTabsModule, MatOptionModule, MatSelectModule, MatCheckboxModule,
-         MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule } from '@angular/material';
+         MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatSlideToggleModule, MatMenu } from '@angular/material';
 
 const MODULES = [
   MatCardModule,
@@ -27,7 +27,8 @@ const MODULES = [
   MatRadioModule,
   MatDatepickerModule,
   MatNativeDateModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatMenuModule
 ];
 
 @NgModule({

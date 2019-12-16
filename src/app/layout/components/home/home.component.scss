@@ -1,0 +1,26 @@
+.home {
+  &__title {
+    background-image: url('../../../../assets/img/skin.png');
+    font-weight: bold;
+    height: 35px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    label {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 0.8;
+      width: 250px;
+      text-align: center;
+    }
+  }
+  &__our-products {
+    font-weight: bold;
+  }
+  &__slogan {
+    background-color: #006837;
+    color: white;
+    font-family: Semibold Italic 20px/10px Myriad Pro;
+  }
+}

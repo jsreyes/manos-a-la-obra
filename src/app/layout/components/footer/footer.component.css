@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 160px;
+  background-color: #f2f2f2;
+}
+.footer--icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer--contact-us {
+  height: 50px;
+  margin: 50px 0px;
+}
+.footer--container-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 0px;
+}
+.footer--container-social__text {
+  text-align: center;
+}
+.footer p {
+  font-size: 10px;
+  margin: 0px;
+}
