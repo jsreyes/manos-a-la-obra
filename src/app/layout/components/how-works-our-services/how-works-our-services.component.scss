@@ -1,0 +1,37 @@
+.works-services {
+  background: url('../../../../assets/img/background-two.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  &--title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    label {
+      width: 400px;
+      text-align: center;
+      padding: 4px;
+      background: #F2F2F2 0% 0% no-repeat padding-box;
+      opacity: 0.8;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  &--container {
+    display: flex;
+    justify-content: space-evenly;
+    &--sub {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 0.8;
+      img {
+        height: 35px;
+      }
+    }
+  }
+}
