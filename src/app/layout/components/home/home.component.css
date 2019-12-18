@@ -16,9 +16,75 @@
 }
 .home__our-products {
   font-weight: bold;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.home__our-products a {
+  text-decoration: none;
 }
 .home__slogan {
   background-color: #006837;
   color: white;
-  font-family: Semibold Italic 20px/10px Myriad Pro;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+.home__container-us-and-services {
+  display: flex;
+  flex-direction: row;
+  height: 190px;
+}
+.home__container-us-and-services--us {
+  display: flex;
+  width: 50%;
+  background: url("../../../../assets/img/background_us.png") no-repeat;
+  background-size: cover;
+  font-size: 13px;
+  padding: 10px;
+  margin: 20px;
+}
+.home__container-us-and-services--us--left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home__container-us-and-services--us--rigth {
+  margin: 10px 20px;
+  text-align: justify;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #0a0a0a;
+  opacity: 0.8;
+  padding: 0px 24px;
+}
+.home__container-us-and-services--us--rigth h3 {
+  text-align: center;
+}
+.home__container-us-and-services--services {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.home__container-us-and-services--services--types {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.home__container-us-and-services--services--types__second {
+  padding: 0px 160px;
+}
+.home__container-us-and-services--services h3 {
+  text-align: center;
+}
+.home__container-us-and-services--services label {
+  width: 150px;
+  text-align: center;
 }
