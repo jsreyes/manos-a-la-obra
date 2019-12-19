@@ -1,3 +1,16 @@
-<div class="slider">
-  <h2>NOSOTROS</h2>
+<div class="slider slider__inicio" *ngIf="router.url === '/'">
+  <h2>Inicio</h2>
+  <p>¡Seguimos manos a la obra!</p>
+</div>
+
+<div class="slider slider__us" *ngIf="router.url === '/nosotros'">
+  <h2>Nosotros</h2>
+</div>
+
+<div class="slider slider__services" *ngIf="router.url === '/servicios'">
+  <h2>Servicios</h2>
+</div>
+
+<div class="slider" *ngIf="router.url === '/catalogo'">
+  <h2>Catálogo</h2>
 </div>

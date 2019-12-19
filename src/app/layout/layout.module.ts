@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { LayoutRoutingModule } from './layout-routing.module';
 
 import { SliderComponent, MenuComponent, FooterComponent, LayoutComponent, HomeComponent,
-         HowWorksOurServicesComponent } from './index';
+         HowWorksOurServicesComponent, UsComponent } from './index';
 
-const COMPONENTS = [ MenuComponent, FooterComponent, SliderComponent, LayoutComponent, HomeComponent, HowWorksOurServicesComponent ];
+const COMPONENTS = [ MenuComponent, FooterComponent, SliderComponent, LayoutComponent,
+                     HomeComponent, HowWorksOurServicesComponent, UsComponent ];
 @NgModule({
   declarations: COMPONENTS,
   imports: [
