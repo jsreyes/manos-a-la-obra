@@ -1,0 +1,65 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.services__our-services {
+  background: #006837 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px 0px;
+}
+.services__our-services h4 {
+  margin: 5px;
+  font-weight: lighter;
+}
+.services__our-services p {
+  margin: 1em 460px;
+}
+.services--container {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.services--container__images {
+  height: 200px;
+  width: 300px;
+}
+.services--container__images__garden {
+  background: url("../../../../assets/img/services-one.png") no-repeat;
+  background-size: cover;
+}
+.services--container__images__floor {
+  background: url("../../../../assets/img/services-two.png") no-repeat;
+  background-size: cover;
+  width: 400px;
+}
+.services--container__images__blackouts {
+  background: url("../../../../assets/img/services_three.png") no-repeat;
+  background-size: cover;
+}
+.services--container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  margin: 74px 60px;
+  text-align: center;
+  font: Bold 20px/20px Myriad Pro;
+  letter-spacing: 0;
+  color: #006837;
+  width: 170px;
+  padding: 5px;
+}
+.services--container__text--middle {
+  margin: 74px 110px;
+}

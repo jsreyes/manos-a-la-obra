@@ -8,7 +8,8 @@ const routes: Routes = [{
   children: [
     { path: '', component: HomeComponent},
     { path: 'home', component: HomeComponent},
-    { path: 'nosotros', component: UsComponent}
+    { path: 'nosotros', component: UsComponent},
+    { path: 'servicios', loadChildren: './../services-section/services-section.module#ServicesSectionModule'}
   ]
 }];
 

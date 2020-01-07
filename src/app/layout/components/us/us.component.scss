@@ -48,6 +48,10 @@
   }
   &--values {
     display: flex;
+    color: #006837;
+    font-size: 13px;
+    justify-content: space-around;
+    padding: 10px 310px;
     &--mision {
       width: 240px;
       text-align: center;
@@ -57,7 +61,7 @@
       text-align: center;
     }
     &--valores {
-      width: 260px;
+      width: 225px;
       text-align: center;
     }
   }
