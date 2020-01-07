@@ -1,38 +1,36 @@
 <div class="menu">
   <img src="../../../../assets/img/icono-manos-a-la-obra.PNG" alt="Manos a la obra">
-  <button mat-button (click)="navigateTo('home')">Inicio</button>
-  <mat-menu #aboveMenu="matMenu" yPosition="above">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  <button mat-button (click)="navigateTo('home')" [ngClass]="router.url === '/' || router.url === '/home'? 'selected' : null">Inicio</button>
 
-  <button mat-button [matMenuTriggerFor]="belowMenu" (click)="navigateTo('nosotros')">Nosotros</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="beforeMenu" (click)="navigateTo('servicios')">Servicios</button>
-  <mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-button (click)="navigateTo('nosotros')" [ngClass]="router.url === '/nosotros' ? 'selected' : null">Nosotros</button>
+  <!--Add this to deploy mat menu in button [matMenuTriggerFor]="belowMenu"-->
+  <!-- <mat-menu #belowMenu="matMenu" yPosition="below">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  </mat-menu> -->
 
-  <button mat-button [matMenuTriggerFor]="afterMenu" (click)="navigateTo('catalogo')">Catálogo</button>
-  <mat-menu #afterMenu="matMenu" xPosition="after">
+  <button mat-button (click)="navigateTo('servicios')" [ngClass]="router.url === '/servicios' ? 'selected' : null">Servicios</button>
+  <!-- <mat-menu #beforeMenu="matMenu" xPosition="before">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  </mat-menu> -->
 
-  <button mat-button [matMenuTriggerFor]="aboveMenu">Proyectos</button>
-  <mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-button (click)="navigateTo('catalogo')" [ngClass]="router.url === '/catalogo' ? 'selected' : null">Catálogo</button>
+  <!-- <mat-menu #afterMenu="matMenu" xPosition="after">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  </mat-menu> -->
 
-  <button mat-button [matMenuTriggerFor]="belowMenu">Cotiza ahora</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-button [ngClass]="router.url === '/proyectos' ? 'selected' : null">Proyectos</button>
+  <!-- <mat-menu #aboveMenu="matMenu" yPosition="above">
     <button mat-menu-item>Item 1</button>
     <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  </mat-menu> -->
+
+  <button mat-button  [ngClass]="router.url === '/cotiza' ? 'selected' : null">Cotiza ahora</button>
+  <!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu> -->
 </div>
