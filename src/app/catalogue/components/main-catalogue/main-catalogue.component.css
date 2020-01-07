@@ -1,9 +1,9 @@
-.services {
+.catalogue {
   display: flex;
   flex-direction: column;
   height: 500px;
 }
-.services__our-services {
+.catalogue__description {
   background: #006837 0% 0% no-repeat padding-box;
   opacity: 1;
   color: white;
@@ -13,38 +13,38 @@
   text-align: center;
   margin: 50px 0px;
 }
-.services__our-services h4 {
+.catalogue__description h4 {
   margin: 5px;
   font-weight: lighter;
 }
-.services__our-services p {
+.catalogue__description p {
   margin: 1em 460px;
 }
-.services--container {
+.catalogue--container {
   padding: 30px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.services--container__images {
+.catalogue--container__images {
   height: 200px;
   width: 300px;
 }
-.services--container__images__garden {
-  background: url("../../../../assets/img/services-one.png") no-repeat;
+.catalogue--container__images__garden {
+  background: url("../../../../assets/img/pisosLaminados.png") no-repeat;
   background-size: cover;
 }
-.services--container__images__floor {
-  background: url("../../../../assets/img/services-two.png") no-repeat;
+.catalogue--container__images__floor {
+  background: url("../../../../assets/img/jardinesVerticales.png") no-repeat;
   background-size: cover;
   width: 400px;
 }
-.services--container__images__blackouts {
-  background: url("../../../../assets/img/services_three.png") no-repeat;
+.catalogue--container__images__blackouts {
+  background: url("../../../../assets/img/persianas.png") no-repeat;
   background-size: cover;
 }
-.services--container__text {
+.catalogue--container__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,12 +54,12 @@
   opacity: 1;
   margin: 74px 60px;
   text-align: center;
-  font: Bold 20px/20px Myriad Pro;
+  font: Bold 21px/25px Myriad Pro;
   letter-spacing: 0;
   color: #006837;
   width: 170px;
   padding: 5px;
 }
-.services--container__text--middle {
+.catalogue--container__text--middle {
   margin: 74px 110px;
 }
