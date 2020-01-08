@@ -1,12 +1,13 @@
 .slider {
-  height: 260px;
+  height: 320px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   background-size: cover;
   &__inicio {
     background-image: url('../../../../assets/img/sliderInicio.png');
+    justify-content: flex-end;
   }
   &__catalogo {
     background-size: cover;
@@ -21,11 +22,18 @@
   }
   h2 {
     text-align: center;
-    font: Bold 48px/58px Myriad Pro;
+    font: Bold 60px/58px Myriad Pro;
     letter-spacing: 0;
     color: #006837;
     opacity: 1;
     -webkit-text-stroke: 0.5px white;
+    margin: 0px;
+  }
+  p {
+    font-family: Dreams-Liem;
+    font-size: 55px;
+    color: #FFFFFF;
+    margin: 10px;
   }
 }
 
