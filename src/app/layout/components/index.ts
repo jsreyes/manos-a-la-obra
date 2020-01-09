@@ -5,4 +5,5 @@ export * from './layout';
 export * from './home';
 export * from './how-works-our-services';
 export * from './us';
+export * from './page-in-construction';
 

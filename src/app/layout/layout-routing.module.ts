@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent, HomeComponent, UsComponent } from './components';
+import { LayoutComponent, HomeComponent, UsComponent, PageInConstructionComponent } from './components';
 
 const routes: Routes = [{
   // Loads Layout
@@ -10,7 +10,9 @@ const routes: Routes = [{
     { path: 'home', component: HomeComponent},
     { path: 'nosotros', component: UsComponent},
     { path: 'servicios', loadChildren: './../services-section/services-section.module#ServicesSectionModule'},
-    { path: 'catalogo', loadChildren: './../catalogue/catalogue.module#CatalogueModule'}
+    { path: 'catalogo', loadChildren: './../catalogue/catalogue.module#CatalogueModule'},
+    { path: 'proyectos', component: PageInConstructionComponent},
+    { path: 'cotiza', component: PageInConstructionComponent}
   ]
 }];
 
