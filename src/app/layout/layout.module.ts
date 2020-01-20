@@ -5,6 +5,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 
 import { SliderComponent, MenuComponent, FooterComponent, LayoutComponent, HomeComponent,
          HowWorksOurServicesComponent, UsComponent, PageInConstructionComponent } from './index';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const COMPONENTS = [ MenuComponent, FooterComponent, SliderComponent, LayoutComponent,
                      HomeComponent, HowWorksOurServicesComponent, UsComponent, PageInConstructionComponent];
@@ -13,7 +14,9 @@ const COMPONENTS = [ MenuComponent, FooterComponent, SliderComponent, LayoutComp
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    MaterialUiModule
+    MaterialUiModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class LayoutModule { }

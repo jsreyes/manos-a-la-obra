@@ -10,8 +10,10 @@
     justify-content: center;
   }
   &--contact-us {
-    height: 50px;
-    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    font-size: 10px;
   }
   &--container-social {
     display: flex;
