@@ -9,7 +9,12 @@ const nodemailer = require("nodemailer");
 const app = express();
 
 //configure the Express middleware to accept CORS requests and parse request body into JSON
-// app.use(ra origin: {"*" }));
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use(bodyParser.json());
 
 //start application server on port 3000
@@ -19,16 +24,13 @@ app.listen(3000, () => {
 
 // define a sendmail endpoint, which will send emails and response with the corresponding status
 app.post("/sendmail", (req, res) => {
-  console.log("request came");
   let user = req.body;
-  console.log(user, ' este es user');
   sendMail(user, (err, info) => {
     if (err) {
       console.log(err);
       res.status(400);
       res.send({ error: "Failed to send email" });
     } else {
-      console.log("Email has been sent");
       res.send(info);
     }
   });
@@ -42,12 +44,12 @@ const sendMail = (user, callback) => {
       pass: "xsnilplnzcqtjoso"
     }
   });
-  transporter.sendMail(mailOptions, callback);
+  transporter.sendMail({
+    from: `javier.reyes@globant.com`,
+    to: `jreyes@belatrixsf.com`,
+    subject: `Contactar a ${user.name}`,
+    html: `<p>Nombre: ${user.name}
+          <p>Email de contacto: ${user.email}</p>
+          <p>Número Celular: ${user.phoneNumber}</p>`
+  }, callback);
 }
-
-const mailOptions = {
-  from: `javier.reyes@globant.com`,
-  to: `jreyes@belatrixsf.com`,
-  subject: "Contactar a ",
-  html: "<h1>And here is the place for HTML</h1>"
-};
