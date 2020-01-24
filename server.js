@@ -8,8 +8,7 @@ const nodemailer = require("nodemailer");
 // create a new Express application instance
 const app = express();
 
-//configure the Express middleware to accept CORS requests and parse request body into JSON
-
+// configure the Express middleware to accept CORS requests and parse request body into JSON
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
