@@ -21,9 +21,10 @@ export class FooterComponent implements OnInit, DoCheck {
   ngDoCheck() {
     console.log('entro');
     if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
-        && this.contactUsForm.get('phoneNumber').value !== '') {
+        && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
           this.isDisabled = false;
-          console.log('entro dos');
+    } else {
+      this.isDisabled = true;
     }
   }
 
@@ -38,7 +39,9 @@ export class FooterComponent implements OnInit, DoCheck {
   sendContactUs(form: FormGroup) {
     if (this.contactUsForm.valid) {
       this.mailService.sendContactUs(form).subscribe((r) => {
+        this.contactUsForm.reset();
         this.isDisabled = true;
+        console.log(this.isDisabled, ' este es el valor de disabled');
       });
     }
   }

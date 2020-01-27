@@ -13,14 +13,10 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <input matInput placeholder="Número de contacto" class="form-control"  formControlName="phoneNumber" maxlength="64" autocomplete="off" minlength="7" maxlength="10">
-        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.minlength">Debe ingresar un número telefonico o de celular</mat-error>
-        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.maxlength">Debe ingresar un número telefonico o de celular</mat-error>
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.minlength">Debe ingresar un número de contacto valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.maxlength">Debe ingresar un número de contacto valido</mat-error>
       </mat-form-field>
       <button mat-raised-button type="submit" [disabled]="isDisabled">Enviar</button>
-      {{isDisabled}}
-      {{!!contactUsForm.invalid}}
-      {{contactUsForm.valid}}
-
     </form>
   </div>
   <div>
