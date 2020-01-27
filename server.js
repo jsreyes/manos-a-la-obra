@@ -4,7 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-
+const dotenv = require('dotenv');
+dotenv.config();
 // create a new Express application instance
 const app = express();
 
@@ -39,16 +40,16 @@ const sendMail = (user, callback) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "javier.reyes@globant.com",
-      pass: "xsnilplnzcqtjoso"
+      user: `${process.env.USER_MAIL}`,
+      pass: `${process.env.KEY_MAIL}`
     }
   });
   transporter.sendMail({
-    from: `javier.reyes@globant.com`,
+    from: `${process.env.USER_MAIL}`,
     to: `jreyes@belatrixsf.com`,
     subject: `Contactar a ${user.name}`,
-    html: `<p>Nombre: ${user.name}
-          <p>Email de contacto: ${user.email}</p>
-          <p>Número Celular: ${user.phoneNumber}</p>`
+    html: `<p><b>Nombre:</b> ${user.name}</p>
+          <p><b>Email de contacto:</b> ${user.email}</p>
+          <p><b>Número Celular:</b> ${user.phoneNumber}</p>`
   }, callback);
 }
