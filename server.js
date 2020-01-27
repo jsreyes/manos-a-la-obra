@@ -5,6 +5,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require('dotenv');
+
+// Deploy with Heroku
+const path = require('path');
 dotenv.config();
 // create a new Express application instance
 const app = express();
@@ -17,10 +20,16 @@ app.use(function(req, res, next) {
 });
 app.use(bodyParser.json());
 
+app.use(express.static('./dist/manos-a-la-obra/'))
+
 //start application server on port 3000
 app.listen(3000, () => {
   console.log("The server started on port 3000");
 });
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join('./dist/manos-a-la-obra/index.html'))
+})
 
 // define a sendmail endpoint, which will send emails and response with the corresponding status
 app.post("/sendmail", (req, res) => {
