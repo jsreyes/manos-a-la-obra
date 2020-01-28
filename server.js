@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(express.static('./dist/manos-a-la-obra/'))
 
 //start application server on port 3000
-app.listen(env.process.PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log("The server started on port 3000");
 });
 
