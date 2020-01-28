@@ -10,7 +10,7 @@ export class SliderComponent implements OnInit {
 
   public url: string;
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
