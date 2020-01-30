@@ -14,8 +14,6 @@ export class MenuComponent implements OnInit {
   }
 
   navigateTo(route: string){
-    console.log(route);
-
     this.router.navigate(['/' + route + '']);
   }
 
