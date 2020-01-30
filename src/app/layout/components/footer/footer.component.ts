@@ -19,7 +19,6 @@ export class FooterComponent implements OnInit, DoCheck {
     this.initForm();
   }
   ngDoCheck() {
-    console.log('entro');
     if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
         && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
           this.isDisabled = false;
