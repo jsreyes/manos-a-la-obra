@@ -55,7 +55,7 @@ const sendMail = (user, callback) => {
   });
   transporter.sendMail({
     from: `${process.env.USER_MAIL}`,
-    to: `jreyes@belatrixsf.com`,
+    to:  `${process.env.USER_MAIL}`,
     subject: `Contactar a ${user.name}`,
     html: `<p><b>Nombre:</b> ${user.name}</p>
           <p><b>Email de contacto:</b> ${user.email}</p>
