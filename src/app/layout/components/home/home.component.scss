@@ -13,19 +13,17 @@
       opacity: 0.8;
       width: 250px;
       text-align: center;
+      font-size: 1.3em;
     }
   }
-  &__our-products {
+  &__description {
     font-weight: bold;
     height: 150px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    a {
-      text-decoration: none;
-      color: black;
-    }
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0px 100px;
   }
   &__slogan {
     background-color: #006837;
