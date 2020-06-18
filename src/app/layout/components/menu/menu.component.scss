@@ -1,3 +1,4 @@
+@import '../../../../styles';
 
 .menu {
   display: flex;
@@ -7,7 +8,12 @@
   justify-content: space-around;
 }
 
-.selected {
-  font: Bold 16px/36px Myriad Pro;
-  color: #006837;
+.button {
+  font-family: Myriad Pro Regular;
+  &--selected {
+    font: Bold 16px/36px Myriad Pro Bold;
+    color: $green;
+    background-color: transparent;
+  }
 }
+

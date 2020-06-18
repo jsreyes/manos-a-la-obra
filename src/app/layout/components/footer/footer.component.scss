@@ -1,9 +1,11 @@
+@import '../../../../styles';
+
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 160px;
-  background-color: #F2F2F2;
+  background-color: $footer-white;
   &--icon {
     display: flex;
     flex-direction: column;

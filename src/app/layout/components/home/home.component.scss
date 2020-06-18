@@ -1,3 +1,5 @@
+@import '../../../../styles';
+
 .home {
   &__title {
     background-image: url('../../../../assets/img/skin.png');
@@ -9,7 +11,7 @@
     justify-content: center;
     align-items: center;
     label {
-      background: #FFFFFF 0% 0% no-repeat padding-box;
+      background: $white 0% 0% no-repeat padding-box;
       opacity: 0.8;
       width: 250px;
       text-align: center;
@@ -26,7 +28,7 @@
     padding: 0px 100px;
   }
   &__slogan {
-    background-color: #006837;
+    background-color: $green;
     color: white;
     height: 80px;
     display: flex;
@@ -58,8 +60,8 @@
           width: 100px;
           text-align: center;
           padding: 4px;
-          background: #F2F2F2 0% 0% no-repeat padding-box;
-          border: 1px solid #000000;
+          background: $footer-white 0% 0% no-repeat padding-box;
+          border: 1px solid $black;
           border-radius: 10px;
           opacity: 0.8;
           margin-top: 10px;
@@ -69,8 +71,8 @@
       &--rigth {
         margin: 10px 20px;
         text-align: justify;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #0A0A0A;
+        background: $white 0% 0% no-repeat padding-box;
+        border: 1px solid $black;
         opacity: 0.8;
         padding: 0px 24px;
         h3 {
@@ -94,9 +96,9 @@
       }
       h3 {
         text-align: center;
-        border-bottom: 1px solid #006837;
+        border-bottom: 1px solid $green;
         font-weight: bold;
-        color: #006837;
+        color: $green;
       }
       label {
         width: 150px;

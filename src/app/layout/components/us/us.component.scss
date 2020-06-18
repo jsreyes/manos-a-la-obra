@@ -1,11 +1,13 @@
+@import '../../../../styles';
+
 .us {
   display: flex;
   flex-direction: row;
   height: 350px;
   justify-content: center;
   align-items: center;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 30%, rgba(0,104,55,1) 40%);
+  background: $white;
+  background: linear-gradient(180deg, $white 40%, $white 30%, $green 40%);
   &__container-info {
     width: 50%;
     display: flex;
@@ -16,13 +18,13 @@
       font-size: 14px;
       text-align: center;
       width: 540px;
-      color: #006837;
+      color: $green;
       opacity: 1;
     }
     &--center {
       font-family: Dreams-Liem;
       height: 60px;
-      border: 1px solid white;
+      border: 1px solid $white;
       font-size: 75px;
       display: flex;
       flex-direction: column;
@@ -38,8 +40,8 @@
       width: 100%;
       padding-top: 15px;
       label {
-        background: #F2F2F2 80% 176% no-repeat padding-box;
-        border: 1px solid #000000;
+        background: $footer-white 80% 176% no-repeat padding-box;
+        border: 1px solid $black;
         border-radius: 15px;
         opacity: 0.3;
         padding: 5px 15px;
@@ -49,7 +51,7 @@
   }
   &--values {
     display: flex;
-    color: #006837;
+    color: $green;
     font-size: 13px;
     justify-content: space-around;
     padding: 10px 310px;
