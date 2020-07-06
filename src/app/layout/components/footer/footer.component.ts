@@ -16,16 +16,16 @@ export class FooterComponent implements OnInit, DoCheck {
               private mailService: MailService) { }
 
   ngOnInit() {
-    this.initForm();
+    // this.initForm();
   }
-  ngDoCheck() {
-    if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
-        && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
-          this.isDisabled = false;
-    } else {
-      this.isDisabled = true;
-    }
-  }
+  // ngDoCheck() {
+  //   if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
+  //       && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
+  //         this.isDisabled = false;
+  //   } else {
+  //     this.isDisabled = true;
+  //   }
+  // }
 
   initForm() {
     this.contactUsForm = this.fb.group({

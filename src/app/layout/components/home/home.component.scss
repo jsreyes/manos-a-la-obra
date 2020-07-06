@@ -2,8 +2,6 @@
 
 .home {
   &__title {
-    background-image: url('../../../../assets/img/skin.png');
-    font-weight: bold;
     height: 35px;
     margin-top: 10px;
     display: flex;
@@ -11,100 +9,68 @@
     justify-content: center;
     align-items: center;
     label {
-      background: $white 0% 0% no-repeat padding-box;
-      opacity: 0.8;
       width: 250px;
       text-align: center;
       font-size: 1.3em;
+      border-bottom: 1px solid $green;
+      color: $green;
+      font-family: Myriad Pro Bold;
     }
   }
   &__description {
-    font-weight: bold;
-    height: 150px;
+    font-family: Myriad Pro Regular;
+    height: 116px;
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 0px 100px;
   }
   &__slogan {
-    background-color: $green;
-    color: white;
+    color: $green;
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-style: italic;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 2em;
+    font-family: Myriad Pro Semibold Italic;
+    background: $slogan-background 0% 0% no-repeat padding-box;
+    border: 1px solid $border-gray;
+    opacity: 1;
   }
   &__container-us-and-services {
     display: flex;
-    flex-direction: row;
-    height: 190px;
-    &--us {
+    flex-direction: column;
+    height: 270px;
+    &__container {
+      padding: 40px;
+      height: 235px;
       display: flex;
-      width: 50%;
-      background: url('../../../../assets/img/background_us.png') no-repeat;
-      background-size: cover;
-      font-size: 13px;
-      padding: 10px;
-      margin: 20px;
-      &--left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        label {
-          width: 100px;
-          text-align: center;
-          padding: 4px;
-          background: $footer-white 0% 0% no-repeat padding-box;
-          border: 1px solid $black;
-          border-radius: 10px;
-          opacity: 0.8;
-          margin-top: 10px;
-          font-weight: bold;
+      &--item {
+        padding: 42px 14px 22px 14px;
+        &__service-one {
+          background: transparent url('../../../../assets/img/service-1.png') 50% 0% no-repeat padding-box;
+          background-size: contain;
         }
-      }
-      &--rigth {
-        margin: 10px 20px;
-        text-align: justify;
-        background: $white 0% 0% no-repeat padding-box;
-        border: 1px solid $black;
-        opacity: 0.8;
-        padding: 0px 24px;
-        h3 {
-          text-align: center;
-          margin: 10px;
+        &__service-two {
+          background: transparent url('../../../../assets/img/service-2.png') 50% 0% no-repeat padding-box;
+          background-size: contain;
+        }
+        &__service-three {
+          background: transparent url('../../../../assets/img/service-3.png') 50% 0% no-repeat padding-box;
+          background-size: contain;
+        }
+        &__service-four {
+          background: transparent url('../../../../assets/img/service-4.png') 50% 0% no-repeat padding-box;
+          background-size: contain;
+        }
+        &__service-five {
+          background: transparent url('../../../../assets/img/service-5.png') 50% 0% no-repeat padding-box;
+          background-size: contain;
         }
       }
     }
-    &--services {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      &--types {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-bottom: 25px;
-        &__second {
-          padding: 0px 160px;
-        }
-      }
-      h3 {
-        text-align: center;
-        border-bottom: 1px solid $green;
-        font-weight: bold;
-        color: $green;
-      }
-      label {
-        width: 150px;
-        text-align: center;
-        font-weight: bold;
-      }
-    }
+
   }
 }
