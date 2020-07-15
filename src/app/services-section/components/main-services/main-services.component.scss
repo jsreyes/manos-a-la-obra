@@ -7,19 +7,18 @@
   &__our-services{
     background: $green 0% 0% no-repeat padding-box;
     opacity: 1;
-    color: white;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    margin: 50px 0px;
-    h4 {
-      margin: 5px;
-      font-weight: bolder;
-      font-size: 1.3em;
-    }
+    margin: 20px 0px;
+    height: 75px;
+    font-family: Myriad Pro Regular;
+    line-height: 24px;
     p {
       margin: 1em 460px;
+      font-size: 1.4em;
     }
   }
   &--container {
