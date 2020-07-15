@@ -15,7 +15,6 @@
     font-family: Myriad Pro Regular;
     height: 75px;
     p {
-      margin: 1em 460px;
       font-size: 1.4em;
     }
   }
@@ -38,7 +37,7 @@
       align-items: center;
       &__garden {
         background: url('../../../../assets/img/pisosLaminados.png') no-repeat;
-        background-size: contain;
+        background-size: cover;
       }
       &__floor {
         background: url('../../../../assets/img/jardinesVerticales.png') no-repeat center;
