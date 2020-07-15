@@ -3,7 +3,6 @@
 .catalogue {
   display: flex;
   flex-direction: column;
-  height: 500px;
   &__description{
     background: $green 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -12,33 +11,38 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    margin: 50px 0px;
-    h4 {
-      margin: 5px;
-      font-weight: bolder;
-      font-size: 1.3em;
-    }
+    margin: 20px 0px;
+    font-family: Myriad Pro Regular;
+    height: 75px;
     p {
       margin: 1em 460px;
+      font-size: 1.4em;
     }
   }
   &--container {
-    padding: 30px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding: 10px 75px;
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;;
+      margin-bottom: 40px;
+      align-items: center;
+    }
     &__images {
-      height: 200px;
-      width: 300px;
+      height: 190px;
+      width: 340px;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       &__garden {
         background: url('../../../../assets/img/pisosLaminados.png') no-repeat;
-        background-size: cover;
+        background-size: contain;
       }
       &__floor {
         background: url('../../../../assets/img/jardinesVerticales.png') no-repeat;
         background-size: cover;
-        width: 400px;
       }
       &__blackouts {
         background: url('../../../../assets/img/persianas.png') no-repeat;
@@ -47,23 +51,17 @@
     }
     &__text {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: $white 0% 0% no-repeat padding-box;
-      border: 1px solid $border-gray;
-      opacity: 1;
-      margin: 74px 60px;
-      text-align: center;
-      font: Bold 21px/25px Myriad Pro;
-      letter-spacing: 0;
+      border: 1px solid #707070;
+      font: 20px/20px Myriad Pro;
       color: $green;
-      width: 170px;
-      padding: 5px;
-      &--middle {
-        margin: 82px 98px;
-        width: 211px;
-      }
+      padding: 10px 5px;
+      font-family: Myriad Pro Bold;
+      text-align: center;
+      height: 55px;
+      width: 175px;
     }
   }
 }
