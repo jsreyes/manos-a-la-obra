@@ -7,7 +7,7 @@ import { MailService } from 'src/app/shared/services/mail.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit, DoCheck {
+export class FooterComponent implements OnInit {
 
   public contactUsForm: FormGroup;
   public isDisabled = true;
