@@ -40,7 +40,6 @@ export class FooterComponent implements OnInit {
       this.mailService.sendContactUs(form).subscribe((r) => {
         this.contactUsForm.reset();
         this.isDisabled = true;
-        console.log(this.isDisabled, ' este es el valor de disabled');
       });
     }
   }

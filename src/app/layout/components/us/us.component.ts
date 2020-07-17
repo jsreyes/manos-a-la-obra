@@ -1,3 +1,5 @@
+import { MailService } from './../../../shared/services/mail.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsComponent implements OnInit {
 
-  constructor() { }
+  public contactUsForm: FormGroup;
+
+  constructor(private fb: FormBuilder,
+              private mailService: MailService) { }
 
   ngOnInit() {
+    this.initForm();
+  }
+
+  initForm() {
+    this.contactUsForm = this.fb.group(
+      {
+        name: [''],
+        // phoneNumber: ['', Validators.compose([Validators.minLength(7), Validators.maxLength(10)])],
+        // email: ['', Validators.email],
+        // message: [''],
+      }
+    );
+  }
+
+  sendContactus(form: FormGroup) {
+    this.mailService.sendContactUs(form);
   }
 
 }

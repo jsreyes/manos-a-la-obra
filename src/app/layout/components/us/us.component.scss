@@ -12,26 +12,27 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     &--top {
-      font-size: 14px;
       text-align: center;
-      width: 540px;
       color: $green;
       opacity: 1;
+      margin-bottom: 10px;
+      font: 15px/20px Myriad Pro;
+      font-family: Myriad Pro Regular;
+      padding: 5px 172px;
     }
     &--center {
       font-family: Dreams-Liem;
-      height: 60px;
+      height: 120px;
       border: 1px solid $white;
       font-size: 75px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       color: white;
-      padding: 30px 15px;
-      margin: 10px;
+      padding: 10px 55px;
+      margin: 15px 10px 10px 10px;
     }
     &--bottom {
       display: flex;
@@ -39,6 +40,7 @@
       justify-content: space-around;
       width: 100%;
       padding-top: 15px;
+      font-family: Myriad Pro Regular;
       label {
         background: $footer-white 80% 176% no-repeat padding-box;
         border: 1px solid $black;
@@ -46,30 +48,78 @@
         opacity: 0.3;
         padding: 5px 15px;
         font-size: 14px;
+        color: $black;
       }
     }
   }
-  &--values {
-    display: flex;
-    color: $green;
-    font-size: 13px;
-    justify-content: space-around;
-    padding: 10px 310px;
-    margin: 20px 0px;
-    h3 {
-      font-size: 20px;
-    }
-    &--mision {
-      width: 240px;
-      text-align: center;
-    }
-    &--vision {
-      width: 260px;
-      text-align: center;
-    }
-    &--valores {
-      width: 225px;
-      text-align: center;
-    }
-  }
+ &__contact {
+   padding: 20px 60px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   &__form {
+     display: flex;
+     flex-direction: column;
+   }
+   &__whatsapp {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-content: space-between;
+     &__container{
+       border: 1px solid $black;
+       padding: 10px 30px;
+       color: $green;
+       text-align: center;
+       opacity: 1;
+       font-family: Myriad Pro Bold;
+       &__request {
+        font: 22px/10px Myriad Pro;
+        letter-spacing: 4.4px;
+       }
+       &__text {
+        font: 18px/10px Myriad Pro;
+        letter-spacing: 0px;
+       }
+     }
+     &__button {
+       background: #006837 0% 0% no-repeat padding-box;
+       border: 1px solid #707070;
+       border-radius: 25px;
+       opacity: 1;;
+       text-align: center;
+       font:  18px/10px Myriad Pro;
+       letter-spacing: 0px;
+       color: #F2F6F4;
+       opacity: 1;
+       font-family: Myriad Pro Bold;
+     }
+   }
+ }
+}
+
+
+mat-form-field {
+  height: 50px;
+}
+
+mat-form-field .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  height: 50px;
+}
+
+mat-form-field .mat-form-field-appearance-outline .mat-form-field-flex {
+  height: 50px;
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+  height: 50px;
+}
+
+mat-form-field .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  height: 50px;
+}
+
+mat-form-field .mat-form-field-appearance-outline .mat-form-field-infix {
+  height: 50px;
 }
