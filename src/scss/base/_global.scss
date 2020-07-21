@@ -1,6 +1,6 @@
 .mat-form-field-appearance-outline .mat-form-field-infix {
   padding: 0.5em 0 0.5em 0px;
-  height: 50px;
+  height: 40px;
 }
 
 .mat-form-field-infix {
@@ -12,15 +12,23 @@
 }
 
 .mat-input-element {
-  caret-color: $green;
+  height: 25px;
+  font-size: 13px;
+  font-family: Myriad Pro Regular;
+  border-bottom: 0px;
+}
+
+.mat-input-element:focus {
+  border-bottom: 0px !important;
+  box-shadow: none !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: $green;
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
   color: $green;
-}
-
-.mat-form-field-appearance-outline .mat-form-field-outline-thick {
-  color: rgba(194, 194, 194, 0.87);
 }
 
 .mat-raised-button {
@@ -40,6 +48,21 @@
   height: 50px;
 }
 
-button:focus {
-  background-color: transparent;
+mat-label {
+  font-size: 13px;
+  font-family: Myriad Pro Regular;
 }
+
+mat-form-field {
+  height: 65px;
+}
+
+.mat-form-field-subscript-wrapper {
+  font-size: 65%;
+  margin-top: .3em;
+}
+
+.mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: $green !important;
+ }

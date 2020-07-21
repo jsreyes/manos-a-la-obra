@@ -22,9 +22,9 @@ export class UsComponent implements OnInit {
     this.contactUsForm = this.fb.group(
       {
         name: [''],
-        // phoneNumber: ['', Validators.compose([Validators.minLength(7), Validators.maxLength(10)])],
-        // email: ['', Validators.email],
-        // message: [''],
+        phoneNumber: ['', Validators.compose([Validators.minLength(7), Validators.maxLength(10)])],
+        email: ['', Validators.email],
+        message: [''],
       }
     );
   }
