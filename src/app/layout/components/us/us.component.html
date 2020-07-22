@@ -26,20 +26,23 @@
     <form class="us__contact__form--container" [formGroup]="contactUsForm" (ngSubmit)="sendContactUs(contactUsForm.value)">
       <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Nombre" formControlName="name" maxlength="64" autocomplete="off">
+        <input matInput placeholder="Nombre" formControlName="name" maxlength="64" autocomplete="off" multiFormat="letters" maxlength="60">
+        <mat-error *ngIf="contactUsForm.get('name').errors?.required">El nombre es obligatorio</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email" maxlength="64" autocomplete="off">
+        <input matInput placeholder="Email" formControlName="email" maxlength="64" autocomplete="off" maxlength="60">
         <mat-error *ngIf="contactUsForm.get('email').errors?.email">Debe ingresar un email valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('email').errors?.required">El email es obligatorio</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Número de contacto</mat-label>
-        <input matInput placeholder="Número de contacto" formControlName="phoneNumber" maxlength="64" autocomplete="off" minlength="7" maxlength="10">
+        <input matInput placeholder="Número de contacto" formControlName="phoneNumber" maxlength="64" autocomplete="off" minlength="7" maxlength="14" multiFormat="phone" [value]="contactUsForm.get('phoneNumber').value | phoneNumber">
         <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.minlength">Debe ingresar un número de contacto valido</mat-error>
         <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.maxlength">Debe ingresar un número de contacto valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.required">El número de contacto es obligatorio</mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
@@ -47,7 +50,7 @@
         <textarea matInput class="us__contact__form--container__textarea" placeholder="Mensaje" formControlName="message" autocomplete="off" maxlength="256" rows="13"></textarea>
       </mat-form-field>
       <div class="us__contact__form--container__button">
-        <button mat-raised-button type="submit" style="width: 100%;">Enviar</button>
+        <button mat-raised-button type="submit" style="width: 100%;" [disabled]="contactUsForm.invalid">Enviar</button>
       </div>
     </form>
 

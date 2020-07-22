@@ -9,6 +9,7 @@ export class MailService {
   constructor(private http: HttpClient) { }
 
   sendContactUs(body: any) {
-    return this.http.post(`${environment.senderMailEndPoint}sendmail`, body);
+    debugger
+    return this.http.post('http://localhost:3000/sendmail', body);
   }
 }
