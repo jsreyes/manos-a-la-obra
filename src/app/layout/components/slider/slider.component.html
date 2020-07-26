@@ -1,28 +1,56 @@
-<div class="slider slider__inicio" *ngIf="router.url === '/' || router.url === '/home'">
-  <h2>Inicio</h2>
-  <p>¡Seguimos manos a la obra!</p>
+<div class="slider">
+  <ul class="slides">
+    <div class="custom-slider custom-slider__inicio" *ngIf="router.url === '/' || router.url === '/home'">
+      <h2>Inicio</h2>
+      <p>¡Seguimos manos a la obra!</p>
+    </div>
+    <li>
+      <img src="../../../../assets/img/sliderInicio.png"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="../../../../assets/img/sliderCatalogo.png"> <!-- random image -->
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="../../../../assets/img/sliderNosotros.png"> <!-- random image -->
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="../../../../assets/img/sliderServices.png"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
 </div>
 
-<div class="slider slider__us" *ngIf="router.url === '/nosotros'">
-  <h2>Nosotros</h2>
-</div>
 
-<div class="slider slider__services" *ngIf="router.url === '/servicios'">
-  <h2>Servicios</h2>
-</div>
+<!-- <ng-container>
+  <div class="custom-slider custom-slider__inicio" *ngIf="router.url === '/' || router.url === '/home'">
+    <h2>Inicio</h2>
+    <p>¡Seguimos manos a la obra!</p>
+  </div>
+  <div class="custom-slider" *ngIf="router.url === '/nosotros'">
+    <h2>Nosotros</h2>
+  </div>
 
-<div class="slider slider__catalogo" *ngIf="router.url === '/catalogo'">
-  <h2>Catálogo</h2>
-</div>
+  <div class="custom-slider" *ngIf="router.url === '/servicios'">
+    <h2>Servicios</h2>
+  </div>
 
-<!--
-<div class="carousel">
-  <a class="carousel-item" href="#one!"><img src="https://cdn.pixabay.com/photo/2019/08/07/14/11/dog-4390885_960_720.jpg"></a>
-  <a class="carousel-item" href="#two!"><img src="https://media.istockphoto.com/photos/portrait-of-dog-in-the-cornfield-picture-id1149548556?b=1&k=6&m=1149548556&s=170667a&w=0&h=bHmZIh1nz3DTDeAjU9ro7XRDPJNmaHf3EAOuXpGs84E="></a>
-  <a class="carousel-item" href="#three!"><img src="https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_960_720.jpg"></a>
-  <a class="carousel-item" href="#four!"><img src="https://cdn.pixabay.com/photo/2013/06/29/21/18/wolf-142173__180.jpg"></a>
-  <a class="carousel-item" href="#five!"><img src="https://media.istockphoto.com/photos/wolf-pup-picture-id474625522?b=1&k=6&m=474625522&s=170667a&w=0&h=94DntaCLCRr73EbFt6-vffN2gSde3zeHgbSFBz8QFPg="></a>
-</div>
+  <div class="custom-slider" *ngIf="router.url === '/catalogo'">
+    <h2>Catálogo</h2>
+  </div>
+</ng-container> -->
 
-<a class="waves-effect waves-light btn blue white-text" (click)="prev()">Previous</a>
-<a class="waves-effect waves-light btn blue white-text" (click)="next()">Next</a> -->

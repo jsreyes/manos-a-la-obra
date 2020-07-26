@@ -13,8 +13,8 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   public url: string;
   options = {
-    fullWidth: false,
-    duration: 5000
+    height: 450,
+    duration: 500
    };
   public carouselActions = new EventEmitter<string | MaterializeAction >();
 
@@ -24,16 +24,16 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const elems = document.querySelectorAll('.carousel');
-    const instances = M.Carousel.init(elems, this.options);
+    const elems = document.querySelectorAll('.slider');
+    const instances = M.Slider.init(elems, this.options);
   }
 
-  prev() {
-    this.carouselActions.emit({ action: 'carousel', params: ['prev']});
-  }
+  // prev() {
+  //   this.carouselActions.emit({ action: 'carousel', params: ['prev']});
+  // }
 
-  next() {
-    this.carouselActions.emit({ action: 'carousel', params: ['next']});
-  }
+  // next() {
+  //   this.carouselActions.emit({ action: 'carousel', params: ['next']});
+  // }
 
 }
