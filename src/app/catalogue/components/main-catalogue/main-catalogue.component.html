@@ -5,36 +5,82 @@
   <div class="catalogue--container">
     <div class="catalogue--container__row">
       <div class="catalogue--container__images catalogue--container__images__garden">
-        <div class="catalogue--container__text">
-          Piso laminado SPC - WPC
+        <div class="catalogue--container__container-text" *ngIf="!showFloor" (mouseenter)="showFloor = true">
+          <div class="catalogue--container__container-text--inside-text" >
+            Piso laminado SPC - WPC
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showFloor" >
+          <div class="catalogue--container__container-hide-text--hidden-text" (mouseleave)="showFloor = false">
+            Nuestros pisos lo instalan expertos , garantizamos su calidad y acabado profesional.
+          </div>
         </div>
       </div>
+
       <div class="catalogue--container__images catalogue--container__images__floor">
-        <div class="catalogue--container__text">
-          Jardines Verticales
+        <div class="catalogue--container__container-text" *ngIf="!showGarden" (mouseenter)="showGarden = true">
+          <div class="catalogue--container__container-text--inside-text">
+            Jardines Verticales
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showGarden" (mouseleave)="showGarden = false">
+          <div class="catalogue--container__container-hide-text--hidden-text">
+            Los jardines verticales pueden ser naturales o artificiales, ideales para oficinas o zonas comunes.
+          </div>
         </div>
       </div>
+
       <div class="catalogue--container__images catalogue--container__images__blackouts">
-        <div class="catalogue--container__text">
-          Persianas
+        <div class="catalogue--container__container-text" *ngIf="!showBlackouts" (mouseenter)="showBlackouts = true">
+          <div class="catalogue--container__container-text--inside-text">
+            Persianas
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showBlackouts" (mouseleave)="showBlackouts = false">
+          <div class="catalogue--container__container-hide-text--hidden-text">
+            Las persianas vienen en diferentes diseños y texturas según su uso o el espacio.
+          </div>
         </div>
       </div>
     </div>
 
     <div class="catalogue--container__row">
       <div class="catalogue--container__images catalogue--container__images__fake-sky">
-        <div class="catalogue--container__text">
-          Cielo Falso PVC
+        <div class="catalogue--container__container-text" *ngIf="!showFakeSky" (mouseenter)="showFakeSky = true">
+          <div class="catalogue--container__container-text--inside-text">
+            Cielo Falso PVC
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showFakeSky" (mouseleave)="showFakeSky = false">
+          <div class="catalogue--container__container-hide-text--hidden-text">
+            El cielo falso en PVC siempre es la mejor opción para darle ese toque final a nuestro techo, podrás escoger colores y diseños.
+          </div>
         </div>
       </div>
+
       <div class="catalogue--container__images catalogue--container__images__3D-wall">
-        <div class="catalogue--container__text">
-          Paredes 3D
+        <div class="catalogue--container__container-text" *ngIf="!showWall" (mouseenter)="showWall = true">
+          <div class="catalogue--container__container-text--inside-text">
+            Paredes 3D
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showWall" (mouseleave)="showWall = false">
+          <div class="catalogue--container__container-hide-text--hidden-text">
+            Las paredes 3D son el toque mágico que le puedes dar a un espacio, se adaptan a tus gustos y tu mismo puedes instalarlas.
+          </div>
         </div>
       </div>
+
       <div class="catalogue--container__images catalogue--container__images__synthetic-grass">
-        <div class="catalogue--container__text">
-          Caucho Reciclado Grama Sintética
+        <div class="catalogue--container__container-text" *ngIf="!showGrass" (mouseenter)="showGrass = true">
+          <div class="catalogue--container__container-text--inside-text">
+            Caucho Reciclado Grama Sintética
+          </div>
+        </div>
+        <div class="catalogue--container__container-hide-text" *ngIf="showGrass" (mouseleave)="showGrass = false">
+          <div class="catalogue--container__container-hide-text--hidden-text">
+            Contamos con grama sintética para canchas o patios interiores y caucho reciclado para parques y gimnasios.
+          </div>
         </div>
       </div>
     </div>

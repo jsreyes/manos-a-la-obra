@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainCatalogueComponent implements OnInit {
 
+  showFloor = false;
+  showGarden = false;
+  showBlackouts = false;
+  showFakeSky = false;
+  showWall = false;
+  showGrass = false;
+
   constructor() { }
 
   ngOnInit() {

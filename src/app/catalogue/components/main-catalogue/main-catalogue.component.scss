@@ -60,19 +60,46 @@
         background-size: cover;
       }
     }
-    &__text {
+    &__container-text {
+      height: 100%;
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: $white 0% 0% no-repeat padding-box;
-      border: 1px solid $border-gray;
-      font: 20px/20px Myriad Pro;
-      color: $green;
-      padding: 10px 5px;
-      font-family: Myriad Pro Bold;
-      text-align: center;
-      height: 55px;
-      width: 175px;
+      justify-content: center;
+      &--inside-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $white 0% 0% no-repeat padding-box;
+        border: 1px solid $border-gray;
+        font: 20px/20px Myriad Pro;
+        color: $green;
+        padding: 10px 5px;
+        font-family: Myriad Pro Bold;
+        text-align: center;
+        height: 55px;
+        width: 175px;
+      }
     }
+    &__container-hide-text {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #707070;
+      border-radius: 25px;
+      opacity: 0.7;
+      height: 100%;
+      display: grid;
+      &--hidden-text {
+        text-align: center;
+        line-height: 20px;
+        font-size: 15px;
+        color: $green;
+        font-family: Myriad Pro Semibold;
+        align-items: center;
+        display: grid;
+        padding: 30px;
+      }
+    }
+
   }
 }
+
