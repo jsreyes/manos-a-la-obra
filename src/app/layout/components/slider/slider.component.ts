@@ -1,6 +1,5 @@
-import { Component, OnInit, EventEmitter, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MaterializeAction } from 'angular2-materialize';
 import M from '../../../../../node_modules/materialize-css/dist/js/materialize.min.js';
 
 
@@ -16,7 +15,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
     height: 450,
     duration: 500
    };
-  public carouselActions = new EventEmitter<string | MaterializeAction >();
 
   constructor(public router: Router) { }
 
