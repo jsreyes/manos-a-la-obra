@@ -1,34 +1,63 @@
 @import '../../../../styles';
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  height: 160px;
-  background-color: $footer-white;
-  &--icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  &--contact-us {
-    display: flex;
-    flex-direction: column;
-    width: 330px;
-    font-size: 10px;
-  }
-  &--container-social {
+@include media(all) {
+  .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 25px 0px;
-    &__text {
-      text-align: center;
-      font-family: Myriad Pro Regular;
+    justify-content: space-around;
+    height: 160px;
+    background-color: $footer-white;
+    &--icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &--contact-us {
+      display: flex;
+      flex-direction: column;
+      width: 330px;
+      font-size: 10px;
+    }
+    &--container-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 25px 0px;
+      &__text {
+        text-align: center;
+        font-family: Myriad Pro Regular;
+      }
+    }
+    p {
+      font-size: 10px;
+      margin: 0px;
     }
   }
-  p {
-    font-size: 10px;
-    margin: 0px;
+}
+
+@include media(xs) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    &--icon {
+      margin: 10px;
+      align-items: center;
+    }
+    &--contact-us {
+      display: flex;
+      flex-direction: column;
+      width: 330px;
+      font-size: 10px;
+    }
+    &--container-social {
+      display: none;
+    }
+    p {
+      font-size: 10px;
+      margin: 0px;
+    }
   }
 }
+

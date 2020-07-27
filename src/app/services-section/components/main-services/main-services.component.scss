@@ -1,70 +1,103 @@
 @import '../../../../styles';
 
-.services {
-  display: flex;
-  flex-direction: column;
-  &__our-services{
-    background: $green 0% 0% no-repeat padding-box;
-    opacity: 1;
-    color: $white;
+@include media(all) {
+  .services {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px 0px;
-    height: 75px;
-    font-family: Myriad Pro Regular;
-    line-height: 24px;
-    p {
-      font-size: 1.4em;
-    }
-  }
-  &--container {
-    padding: 10px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 40px;
-    &__images {
-      height: 200px;
-      width: 380px;
-      border-radius: 25px;
+    &__our-services{
+      background: $green 0% 0% no-repeat padding-box;
+      opacity: 1;
+      color: $white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &__garden {
-        background: url('../../../../assets/img/mantenimiento.png') no-repeat;
-        background-size: cover;
-      }
-      &__floor {
-        background: url('../../../../assets/img/services-two.png') no-repeat;
-        background-size: cover;
-      }
-      &__blackouts {
-        background: url('../../../../assets/img/guardaescobas.png') no-repeat center;
-        background-size: cover;
-      }
-    }
-    &__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      background: $white 0% 0% no-repeat padding-box;
-      border: 1px solid $border-gray;
-      opacity: 0.8;
-      font: 18px/18px Myriad Pro;
-      font-family: Myriad Pro Semibold;
-      color: $green;
-      padding: 10px 5px;
-      height: 150px;
-      width: 310px;
-      border-radius: 25px;
+      justify-content: space-around;
+      text-align: center;
+      margin: 20px 0px;
+      height: 75px;
+      font-family: Myriad Pro Regular;
+      line-height: 24px;
       p {
-        margin: 5px;
+        font-size: 1.4em;
+      }
+    }
+    &--container {
+      padding: 10px 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 40px;
+      &__images {
+        height: 200px;
+        width: 380px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__garden {
+          background: url('../../../../assets/img/mantenimiento.png') no-repeat;
+          background-size: cover;
+        }
+        &__floor {
+          background: url('../../../../assets/img/services-two.png') no-repeat;
+          background-size: cover;
+        }
+        &__blackouts {
+          background: url('../../../../assets/img/guardaescobas.png') no-repeat center;
+          background-size: cover;
+        }
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: $white 0% 0% no-repeat padding-box;
+        border: 1px solid $border-gray;
+        opacity: 0.8;
+        font: 18px/18px Myriad Pro;
+        font-family: Myriad Pro Semibold;
+        color: $green;
+        padding: 10px 5px;
+        height: 150px;
+        width: 310px;
+        border-radius: 25px;
+        p {
+          margin: 5px;
+        }
       }
     }
   }
 }
+
+@include media(xs) {
+  .services {
+    &__our-services{
+      padding: 0px 5px;
+      height: auto;
+      p {
+        font-size: 1.1em;
+        line-height: 20px;
+      }
+    }
+    &--container {
+      flex-direction: column;
+      padding: 10px;
+      margin-bottom: 10px;
+      &__images {
+        height: 150px;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+      &__text {
+        padding: 10px;
+        height: 130px;
+        width: 280px;
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
