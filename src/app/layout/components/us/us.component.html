@@ -1,11 +1,11 @@
 <div class="us">
-  <div>
-    <img src="../../../../assets/img/inspector.png" height="210px" width="300px">
+  <div class="us__container-images">
+    <img src="../../../../assets/img/inspector.png" class="us__container-images__image">
   </div>
   <div class="us__container-info">
     <div class="us__container-info--top">
-      <h3>¿QUIÉNES SOMOS?</h3>
-      <p>Manos a la obra es una empresa enfocada en proyectos de obras para remodelación e instalación de diferentes opciones de acabados al
+      <p>¿QUIÉNES SOMOS?</p>
+      <p style="margin: 0px">Manos a la obra es una empresa enfocada en proyectos de obras para remodelación e instalación de diferentes opciones de acabados al
         interior de unidades residenciales como apartamentos, casas, oficinas y lobby´s, dentro y fuera de la ciudad.</p>
     </div>
     <div class="us__container-info--center">¡Seguimos manos a la obra!</div>
@@ -15,21 +15,54 @@
       <label for="">EXPERIENCIA</label>
     </div>
   </div>
-  <div>
-    <img src="../../../../assets/img/piso_laminado.png" height="210px" width="300px">
+  <div class="us__container-images">
+    <img src="../../../../assets/img/piso_laminado.png" class="us__container-images__image">
   </div>
 </div>
-<div class="us--values">
-  <div class="us--values--mision">
-    <h3>MISIÓN</h3>
-    Ser una de las empresas líderes en la prestación de diferentes soluciones de obra, instalación y remodelación orientadas a la satisfacción de las necesidades de nuestros clientes, brindándoles un servicio óptimo y una experiencia memorable.
+
+<div class="us__contact">
+  <div class="us__contact__form">
+
+    <form class="us__contact__form--container" [formGroup]="contactUsForm" (ngSubmit)="sendContactUs(contactUsForm.value)">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" formControlName="name" maxlength="64" autocomplete="off" multiFormat="letters" maxlength="60">
+        <mat-error *ngIf="contactUsForm.get('name').errors?.required">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" maxlength="64" autocomplete="off" maxlength="60">
+        <mat-error *ngIf="contactUsForm.get('email').errors?.email">Debe ingresar un email valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('email').errors?.required">El email es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número de contacto</mat-label>
+        <input matInput placeholder="Número de contacto" formControlName="phoneNumber" maxlength="64" autocomplete="off" minlength="7" maxlength="14" multiFormat="phone" [value]="contactUsForm.get('phoneNumber').value | phoneNumber">
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.minlength">Debe ingresar un número de contacto valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.maxlength">Debe ingresar un número de contacto valido</mat-error>
+        <mat-error *ngIf="contactUsForm.get('phoneNumber').errors?.required">El número de contacto es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput class="us__contact__form--container__textarea" placeholder="Mensaje" formControlName="message" autocomplete="off" maxlength="256" rows="13"></textarea>
+      </mat-form-field>
+      <div class="us__contact__form--container__button">
+        <button mat-raised-button type="submit" style="width: 100%;" [disabled]="contactUsForm.invalid">Enviar</button>
+      </div>
+    </form>
+
   </div>
-  <div class="us--values--vision">
-    <h3>VISIÓN</h3>
-    Ser una organización altamente competitiva, innovadora, humana y rentable, sustentada en la calidad, funcionalidad, mínimo mantenimiento y larga vida de nuestros productos.
-  </div>
-  <div class="us--values--valores">
-    <h3>VALORES</h3>
-    Compromiso, Honestidad, Calidad, Responsabilidad, Profesionalismo, Servicio.
+
+  <div class="us__contact__whatsapp">
+    <div class="us__contact__whatsapp__container">
+      <p class="us__contact__whatsapp__container__request">SOLICITA UNA VISITA</p>
+      <p class="us__contact__whatsapp__container__text">¡Sin costo y sin compromiso!</p>
+    </div>
+    <div class="us__contact__whatsapp__con-button">
+      <button mat-raised-button><a href="https://wa.link/g4cibi" target="_blank">WhatsApp</a></button>
+    </div>
   </div>
 </div>

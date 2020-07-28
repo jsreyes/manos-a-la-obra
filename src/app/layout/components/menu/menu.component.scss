@@ -1,13 +1,46 @@
+@import '../../../../styles';
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  padding: 50px 50px 25px 50px;
-  align-items: center;
-  justify-content: space-around;
+@include media(all) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    padding: 50px 50px 25px 50px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .button {
+    font-family: Myriad Pro Regular;
+    &--selected {
+      font: Bold 16px/36px Myriad Pro Bold;
+      color: $green;
+      background-color: transparent;
+    }
+  }
+
+  button:focus {
+    background-color: transparent;
+  }
 }
 
-.selected {
-  font: Bold 16px/36px Myriad Pro;
-  color: #006837;
+@include media(xs) {
+   .menu {
+    padding: 20px 10px;
+  }
+
+  .button {
+    font-family: Myriad Pro Regular;
+    font-size: 13px;
+    padding: 0px;
+    &--selected {
+      font: Bold 13px/5px Myriad Pro Bold;
+      padding: 0px;
+    }
+  }
+
+  button:focus {
+    background-color: transparent;
+  }
 }
+
+

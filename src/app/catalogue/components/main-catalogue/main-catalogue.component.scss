@@ -1,67 +1,137 @@
-.catalogue {
-  display: flex;
-  flex-direction: column;
-  height: 500px;
-  &__description{
-    background: #006837 0% 0% no-repeat padding-box;
-    opacity: 1;
-    color: white;
+@import '../../../../styles';
+
+@include media(all) {
+
+  .catalogue {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    margin: 50px 0px;
-    h4 {
-      margin: 5px;
-      font-weight: bolder;
-      font-size: 1.3em;
-    }
-    p {
-      margin: 1em 460px;
-    }
-  }
-  &--container {
-    padding: 30px 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    &__images {
-      height: 200px;
-      width: 300px;
-      &__garden {
-        background: url('../../../../assets/img/pisosLaminados.png') no-repeat;
-        background-size: cover;
-      }
-      &__floor {
-        background: url('../../../../assets/img/jardinesVerticales.png') no-repeat;
-        background-size: cover;
-        width: 400px;
-      }
-      &__blackouts {
-        background: url('../../../../assets/img/persianas.png') no-repeat;
-        background-size: cover;
-      }
-    }
-    &__text {
+    &__description{
+      background: $green 0% 0% no-repeat padding-box;
+      opacity: 1;
+      color: $white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      border: 1px solid #707070;
-      opacity: 1;
-      margin: 74px 60px;
+      justify-content: space-around;
       text-align: center;
-      font: Bold 21px/25px Myriad Pro;
-      letter-spacing: 0;
-      color: #006837;
-      width: 170px;
-      padding: 5px;
-      &--middle {
-        margin: 82px 98px;
-        width: 211px;
+      margin: 20px 0px;
+      font-family: Myriad Pro Regular;
+      height: 75px;
+      p {
+        font-size: 1.4em;
+      }
+    }
+    &--container {
+      padding: 10px 75px;
+      &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;;
+        margin-bottom: 40px;
+        align-items: center;
+      }
+      &__images {
+        height: 190px;
+        width: 340px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__garden {
+          background: url('../../../../assets/img/pisosLaminados.png') no-repeat;
+          background-size: cover;
+        }
+        &__floor {
+          background: url('../../../../assets/img/jardinesVerticales.png') no-repeat center;
+          background-size: cover;
+        }
+        &__blackouts {
+          background: url('../../../../assets/img/persianas-big-2.png') no-repeat center;
+          background-size: cover;
+        }
+        &__fake-sky {
+          background: url('../../../../assets/img/cieloPVC.png') no-repeat bottom;
+          background-size: cover;
+        }
+        &__3D-wall {
+          background: url('../../../../assets/img/pared3D.png') no-repeat bottom;
+          background-size: cover;
+        }
+        &__synthetic-grass {
+          background: url('../../../../assets/img/gramaSintetica.png') no-repeat;
+          background-size: cover;
+        }
+      }
+      &__container-text {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--inside-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $white 0% 0% no-repeat padding-box;
+          border: 1px solid $border-gray;
+          font: 20px/20px Myriad Pro;
+          color: $green;
+          padding: 10px 5px;
+          font-family: Myriad Pro Bold;
+          text-align: center;
+          height: 55px;
+          width: 175px;
+        }
+      }
+      &__container-hide-text {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 25px;
+        opacity: 0.7;
+        height: 100%;
+        display: grid;
+        &--hidden-text {
+          text-align: center;
+          line-height: 20px;
+          font-size: 15px;
+          color: $green;
+          font-family: Myriad Pro Semibold;
+          align-items: center;
+          display: grid;
+          padding: 30px;
+        }
+      }
+
+    }
+  }
+}
+
+@include media(xs) {
+  .catalogue {
+    &__description{
+      height: auto;
+      p {
+        font-size: 1.2em;
+      }
+    }
+    &--container {
+      padding: 0px;
+      &__row {
+        flex-direction: column;
+        margin-bottom: 0px;
+      }
+      &__images {
+        width: 300px;
+        margin-bottom: 10px;
+      }
+      &__container-text {
+        &--inside-text {
+          font-size: 16px;
+          line-height: 17px;
+          padding: 10px 21px;
+        }
       }
     }
   }
 }
+

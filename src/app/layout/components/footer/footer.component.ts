@@ -7,7 +7,7 @@ import { MailService } from 'src/app/shared/services/mail.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit, DoCheck {
+export class FooterComponent implements OnInit {
 
   public contactUsForm: FormGroup;
   public isDisabled = true;
@@ -16,16 +16,16 @@ export class FooterComponent implements OnInit, DoCheck {
               private mailService: MailService) { }
 
   ngOnInit() {
-    this.initForm();
+    // this.initForm();
   }
-  ngDoCheck() {
-    if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
-        && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
-          this.isDisabled = false;
-    } else {
-      this.isDisabled = true;
-    }
-  }
+  // ngDoCheck() {
+  //   if (this.contactUsForm.get('name').value !== '' && this.contactUsForm.get('email').value !== ''
+  //       && this.contactUsForm.get('phoneNumber').value !== '' && this.contactUsForm.valid) {
+  //         this.isDisabled = false;
+  //   } else {
+  //     this.isDisabled = true;
+  //   }
+  // }
 
   initForm() {
     this.contactUsForm = this.fb.group({
@@ -40,7 +40,6 @@ export class FooterComponent implements OnInit, DoCheck {
       this.mailService.sendContactUs(form).subscribe((r) => {
         this.contactUsForm.reset();
         this.isDisabled = true;
-        console.log(this.isDisabled, ' este es el valor de disabled');
       });
     }
   }
