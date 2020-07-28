@@ -116,32 +116,16 @@
     &__container-us-and-services {
       height: auto;
       &__container {
-        padding: 10px;
+        padding: 10px 0px;
         height: auto;
         flex-direction: column;
+        align-items: center;
         &--item {
           margin-bottom: 10px;
           padding: 0px;
-          &__service-one {
-            background: transparent url('../../../../assets/img/piso-laminado-1.png') 50% 0% no-repeat padding-box;
-            background-size: contain;
-          }
-          &__service-two {
-            background: transparent url('../../../../assets/img/service-2.png') 50% 0% no-repeat padding-box;
-            background-size: contain;
-          }
-          &__service-three {
-            background: transparent url('../../../../assets/img/service-3.png') 50% 0% no-repeat padding-box;
-            background-size: contain;
-          }
-          &__service-four {
-            background: transparent url('../../../../assets/img/service-4.png') 50% 0% no-repeat padding-box;
-            background-size: contain;
-          }
-          &__service-five {
-            background: transparent url('../../../../assets/img/service-5.png') 50% 0% no-repeat padding-box;
-            background-size: contain;
-          }
+          height: 150px;
+          align-items: center;
+          display: flex;
         }
         &--inside {
           font-size: 11px;
@@ -152,7 +136,6 @@
           justify-content: center;
           &--center {
             width: auto;
-            margin: 53px 70px;
           }
         }
       }
